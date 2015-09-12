@@ -117,7 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 
 ln -sf /etc/certs/ca-certificates.crt $RPM_BUILD_ROOT%{_datadir}/kf5/kssl/ca-bundle.crt
 
-%find_lang kdelibs4support --all-name
+%find_lang kdelibs4support --all-name --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
