@@ -1,15 +1,15 @@
-%define		kdeframever	5.19
+%define		kdeframever	5.39
 %define		qtver		5.3.2
 %define		kfname		kdelibs4support
 #
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
-Version:	5.19.0
+Version:	5.39.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	7b6b02db93202ba8948d47a6b6b1abff
+# Source0-md5:	6e17075c91da418267fd4bae90fb8cfa
 URL:		http://www.kde.org/
 BuildRequires:	NetworkManager-devel >= 0.7.0
 BuildRequires:	Qt5Concurrent-devel
@@ -38,8 +38,10 @@ BuildRequires:	kf5-kconfigwidgets-devel >= %{version}
 BuildRequires:	kf5-kcoreaddons-devel >= %{version}
 BuildRequires:	kf5-kcrash-devel >= %{version}
 BuildRequires:	kf5-kdbusaddons-devel >= %{version}
+BuildRequires:	kf5-kded-devel >= %{version}
 BuildRequires:	kf5-kdesignerplugin-devel >= %{version}
 BuildRequires:	kf5-kdoctools-devel >= %{version}
+BuildRequires:	kf5-kemoticons-devel >= %{version}
 BuildRequires:	kf5-kglobalaccel-devel >= %{version}
 BuildRequires:	kf5-kguiaddons-devel >= %{version}
 BuildRequires:	kf5-ki18n-devel >= %{version}
