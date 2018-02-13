@@ -1,15 +1,15 @@
-%define		kdeframever	5.39
+%define		kdeframever	5.43
 %define		qtver		5.3.2
 %define		kfname		kdelibs4support
 #
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
-Version:	5.39.0
+Version:	5.43.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	6e17075c91da418267fd4bae90fb8cfa
+# Source0-md5:	984f3900ca5fb33c57d5f0021b4e3fb8
 URL:		http://www.kde.org/
 BuildRequires:	NetworkManager-devel >= 0.7.0
 BuildRequires:	Qt5Concurrent-devel
@@ -140,7 +140,7 @@ rm -rf $RPM_BUILD_ROOT
 /etc/xdg/ksslcalist
 %attr(755,root,root) %{_bindir}/kdebugdialog5
 %attr(755,root,root) %{_bindir}/kf5-config
-%attr(755,root,root) %{_libdir}/kf5/fileshareset
+%attr(755,root,root) %{_libexecdir}/kf5/fileshareset
 %attr(755,root,root) %ghost %{_libdir}/libKF5KDELibs4Support.so.5
 %attr(755,root,root) %{_libdir}/libKF5KDELibs4Support.so.*.*.*
 %attr(755,root,root) %{_libdir}/qt5/plugins/designer/kf5deprecatedwidgets.so
