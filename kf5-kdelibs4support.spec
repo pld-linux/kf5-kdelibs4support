@@ -5,7 +5,7 @@
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
 Version:	5.43.0
-Release:	3
+Release:	4
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
@@ -46,7 +46,9 @@ BuildRequires:	kf5-kglobalaccel-devel >= %{version}
 BuildRequires:	kf5-kguiaddons-devel >= %{version}
 BuildRequires:	kf5-ki18n-devel >= %{version}
 BuildRequires:	kf5-kiconthemes-devel >= %{version}
+BuildRequires:	kf5-kinit-devel >= %{version}
 BuildRequires:	kf5-kio-devel >= %{version}
+BuildRequires:	kf5-kitemmodels-devel >= %{version}
 BuildRequires:	kf5-kitemviews-devel >= %{version}
 BuildRequires:	kf5-kjobwidgets-devel >= %{version}
 BuildRequires:	kf5-knotifications-devel >= %{version}
@@ -95,6 +97,13 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	kf5-kcrash-devel >= %{version}
 Requires:	kf5-kdesignerplugin-devel >= %{version}
+Requires:	kf5-kemoticons-devel >= %{version}
+Requires:	kf5-kguiaddons-devel >= %{version}
+Requires:	kf5-kiconthemes-devel >= %{version}
+Requires:	kf5-kinit-devel >= %{version}
+Requires:	kf5-kitemmodels-devel >= %{version}
+Requires:	kf5-kparts-devel >= %{version}
+Requires:	kf5-kunitconversion-devel >= %{version}
 
 %description devel
 Header files for %{kfname} development.
