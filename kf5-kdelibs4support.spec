@@ -1,15 +1,15 @@
-%define		kdeframever	5.56
+%define		kdeframever	5.59
 %define		qtver		5.9.0
 %define		kfname		kdelibs4support
 #
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
-Version:	5.56.0
+Version:	5.59.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	df51f32b53128527e6afd7db86fc3b9f
+# Source0-md5:	4b3a7daca13089d58192e791a73aa45f
 URL:		http://www.kde.org/
 BuildRequires:	NetworkManager-devel >= 0.7.0
 BuildRequires:	Qt5Concurrent-devel
@@ -61,6 +61,7 @@ BuildRequires:	kf5-kwindowsystem-devel >= %{version}
 BuildRequires:	kf5-kxmlgui-devel >= %{version}
 BuildRequires:	kf5-solid-devel >= %{version}
 BuildRequires:	kf5-sonnet-devel >= %{version}
+BuildRequires:	ninja
 BuildRequires:	openssl-devel
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
@@ -118,17 +119,19 @@ Pliki nagłówkowe dla programistów używających %{kfname}.
 install -d build
 cd build
 %cmake \
+	-G Ninja \
+	-DHTML_INSTALL_DIR=%{_kdedocdir} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
 	../
-%{__make}
+%ninja_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-%{__make} -C build/ install \
-        DESTDIR=$RPM_BUILD_ROOT
+%ninja_install -C build
 
 ln -sf /etc/certs/ca-certificates.crt $RPM_BUILD_ROOT%{_datadir}/kf5/kssl/ca-bundle.crt
+rm -rf $RPM_BUILD_ROOT%{_kdedocdir}/sr
+rm -rf $RPM_BUILD_ROOT%{_kdedocdir}/sr@latin
 
 %find_lang kdelibs4support --all-name --with-kde
 
@@ -162,7 +165,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/interfaces/kf5_org.freedesktop.PowerManagement.xml
 %{_datadir}/dbus-1/interfaces/kf5_org.kde.Solid.Networking.Client.xml
 %{_datadir}/dbus-1/interfaces/kf5_org.kde.Solid.PowerManagement.PolicyAgent.xml
-%{_docdir}/HTML/en/kdebugdialog5
 %{_datadir}/kf5/kdoctools/customization/catalog4.xml
 %{_datadir}/kf5/kdoctools/customization/dtd/kdex.dtd
 %dir %{_datadir}/kf5/kssl
@@ -204,7 +206,15 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kservicetypes5/qimageio_plugin.desktop
 %{_localedir}/kf5_all_languages
 %{_mandir}/man1/kf5-config.1*
-
+%lang(ca) %{_mandir}/ca/man1/kf5-config.1*
+%lang(de) %{_mandir}/de/man1/kf5-config.1*
+%lang(es) %{_mandir}/es/man1/kf5-config.1*
+%lang(it) %{_mandir}/it/man1/kf5-config.1*
+%lang(nl) %{_mandir}/nl/man1/kf5-config.1*
+%lang(pt) %{_mandir}/pt/man1/kf5-config.1*
+%lang(pt_BR) %{_mandir}/pt_BR/man1/kf5-config.1*
+%lang(sv) %{_mandir}/sv/man1/kf5-config.1*
+%lang(uk) %{_mandir}/uk/man1/kf5-config.1*
 
 %files devel
 %defattr(644,root,root,755)
