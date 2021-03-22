@@ -1,15 +1,15 @@
-%define		kdeframever	5.79
+%define		kdeframever	5.80
 %define		qtver		5.9.0
 %define		kfname		kdelibs4support
 #
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
-Version:	5.79.0
+Version:	5.80.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	9055eb30f76245929b22b453bea681b9
+# Source0-md5:	91081a0d64ded1f66516547e559988b4
 URL:		http://www.kde.org/
 BuildRequires:	NetworkManager-devel >= 0.7.0
 BuildRequires:	Qt5Concurrent-devel
@@ -155,7 +155,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kdebugdialog5
 %attr(755,root,root) %{_bindir}/kf5-config
 %attr(755,root,root) %{_libexecdir}/kf5/fileshareset
-%attr(755,root,root) %ghost %{_libdir}/libKF5KDELibs4Support.so.5
+%ghost %{_libdir}/libKF5KDELibs4Support.so.5
 %attr(755,root,root) %{_libdir}/libKF5KDELibs4Support.so.*.*.*
 %attr(755,root,root) %{_libdir}/qt5/plugins/designer/kf5deprecatedwidgets.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kcm_ssl.so
@@ -182,7 +182,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kf5/widgets/pics/krestrictedline.png
 %{_datadir}/kf5/widgets/pics/ktextbrowser.png
 %{_datadir}/kservices5/kcm_ssl.desktop
-#%%{_datadir}/kservices5/kded/networkstatus.desktop
 %{_datadir}/kservices5/metainfo.protocol
 %{_datadir}/kservices5/qimageioplugins/bmp.desktop
 %{_datadir}/kservices5/qimageioplugins/gif.desktop
@@ -223,4 +222,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/cmake/KDELibs4
 %{_libdir}/cmake/KF5KDE4Support
 %{_libdir}/cmake/KF5KDELibs4Support
-%attr(755,root,root) %{_libdir}/libKF5KDELibs4Support.so
+%{_libdir}/libKF5KDELibs4Support.so
