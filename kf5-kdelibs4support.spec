@@ -1,15 +1,15 @@
-%define		kdeframever	5.80
+%define		kdeframever	5.81
 %define		qtver		5.9.0
 %define		kfname		kdelibs4support
 #
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
-Version:	5.80.0
+Version:	5.81.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	91081a0d64ded1f66516547e559988b4
+# Source0-md5:	a105a93156ef68ba65744fb43e8d1957
 URL:		http://www.kde.org/
 BuildRequires:	NetworkManager-devel >= 0.7.0
 BuildRequires:	Qt5Concurrent-devel
