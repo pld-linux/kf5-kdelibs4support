@@ -1,15 +1,15 @@
-%define		kdeframever	5.84
+%define		kdeframever	5.85
 %define		qtver		5.9.0
 %define		kfname		kdelibs4support
 #
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
-Version:	5.84.0
+Version:	5.85.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	69ddd05242ebd5c29a8eb9d24085ee05
+# Source0-md5:	f5e0ca6f84d143f216a38cfb0c083267
 URL:		http://www.kde.org/
 BuildRequires:	NetworkManager-devel >= 0.7.0
 BuildRequires:	Qt5Concurrent-devel
@@ -182,7 +182,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kf5/widgets/pics/krestrictedline.png
 %{_datadir}/kf5/widgets/pics/ktextbrowser.png
 %{_datadir}/kservices5/kcm_ssl.desktop
-%{_datadir}/kservices5/metainfo.protocol
 %{_datadir}/kservices5/qimageioplugins/bmp.desktop
 %{_datadir}/kservices5/qimageioplugins/gif.desktop
 %{_datadir}/kservices5/qimageioplugins/ico.desktop
