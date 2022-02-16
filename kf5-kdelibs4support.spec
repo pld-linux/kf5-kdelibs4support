@@ -1,15 +1,15 @@
-%define		kdeframever	5.90
+%define		kdeframever	5.91
 %define		qtver		5.9.0
 %define		kfname		kdelibs4support
 #
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
-Version:	5.90.0
+Version:	5.91.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	cac198a0ed917589c39612322f893b22
+# Source0-md5:	c366867d52842fa7b720dafb5fb76b40
 URL:		http://www.kde.org/
 BuildRequires:	NetworkManager-devel >= 0.7.0
 BuildRequires:	Qt5Concurrent-devel
@@ -207,6 +207,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ca) %{_mandir}/ca/man1/kf5-config.1*
 %lang(de) %{_mandir}/de/man1/kf5-config.1*
 %lang(es) %{_mandir}/es/man1/kf5-config.1*
+%lang(fr) %{_mandir}/fr/man1/kf5-config.1*
 %lang(it) %{_mandir}/it/man1/kf5-config.1*
 %lang(nl) %{_mandir}/nl/man1/kf5-config.1*
 %lang(pt) %{_mandir}/pt/man1/kf5-config.1*
@@ -217,7 +218,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %{_includedir}/KF5/KDELibs4Support
-%{_includedir}/KF5/kdelibs4support_version.h
 %{_libdir}/cmake/KDELibs4
 %{_libdir}/cmake/KF5KDE4Support
 %{_libdir}/cmake/KF5KDELibs4Support
