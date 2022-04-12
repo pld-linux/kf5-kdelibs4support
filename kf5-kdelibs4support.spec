@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.92
+%define		kdeframever	5.93
 %define		qtver		5.9.0
 %define		kfname		kdelibs4support
 #
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
-Version:	5.92.0
+Version:	5.93.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	5a789e122e5f8af6a541a23cd6bdbfb3
+# Source0-md5:	4eb909b3521923a9f93dd3790d9fcbb9
 URL:		http://www.kde.org/
 BuildRequires:	NetworkManager-devel >= 0.7.0
 BuildRequires:	Qt5Concurrent-devel
@@ -163,6 +163,7 @@ rm -rf $RPM_BUILD_ROOT
 /etc/xdg/ksslcalist
 %attr(755,root,root) %{_bindir}/kdebugdialog5
 %attr(755,root,root) %{_bindir}/kf5-config
+%attr(755,root,root) %{_libexecdir}/kf5/filesharelist
 %attr(755,root,root) %{_libexecdir}/kf5/fileshareset
 %ghost %{_libdir}/libKF5KDELibs4Support.so.5
 %attr(755,root,root) %{_libdir}/libKF5KDELibs4Support.so.*.*.*
