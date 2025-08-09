@@ -8,7 +8,7 @@
 Summary:	KDELibs 4 Support
 Name:		kf5-%{kfname}
 Version:	5.116.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
@@ -106,6 +106,7 @@ Requires:	kf5-kguiaddons-devel >= %{version}
 Requires:	kf5-kiconthemes-devel >= %{version}
 Requires:	kf5-kinit-devel >= %{version}
 Requires:	kf5-kitemmodels-devel >= %{version}
+Requires:	kf5-knotifications-devel >= %{version}
 Requires:	kf5-kparts-devel >= %{version}
 Requires:	kf5-kunitconversion-devel >= %{version}
 
